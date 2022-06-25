@@ -4,7 +4,6 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import axios from 'axios';
 
-
 //import components
 import About from './components/globalViews/About';
 import Home from './components/globalViews/Home';
@@ -13,6 +12,7 @@ import Login from './components/globalViews/Login';
 import AddOrganisation from './components/OrganizationTemplates/AddOrganisation';
 import Dashboard from './components/OrganizationTemplates/Dashboard';
 import PageNotFound from './PageNotFound'
+import AddLocationDashboard from './components/OrganizationTemplates/AddLocationDashboard'
 
 const App = () => {
 
@@ -26,6 +26,7 @@ const App = () => {
           <Route exact path="/login" element={<Login />}/> 
           <Route exact path="/add-organization" element={<AddOrganisation />} />
           <Route exact path="/dash-board" element={<Dashboard meta={12} />} />
+          <Route exact path="/add-location-dashboard" element={<AddLocationDashboard/>} />
           <Route path="*" element={<PageNotFound/>}/>
         </Routes>
       </div>

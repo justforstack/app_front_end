@@ -63,7 +63,7 @@ const AddEnterprise = ({organizationData}) => {
         <>
             <p className="mt-3">
                 <a className="btn btn-primary" data-bs-toggle="collapse" href="#addEnterpreise" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Add new Enterpreise
+                    Add new Enterprise
                 </a>
             </p>
             <div className="collapse" id="addEnterpreise">
