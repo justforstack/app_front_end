@@ -4,23 +4,25 @@ import { useNavigate } from 'react-router-dom'
 
 const baseURl = "https://account-management-system-hero.herokuapp.com/add-enterprise-location"
 const AddEnterprise = ({organizationData}) => {
+   const {organizationId}=organizationData
     const navigate = useNavigate();
     const [enterpriseData, setEnterpriseData] = useState({
         enterpriseName:"",
         enterpriseAddress:"",
         locationName:"",
         locationAddress:"",
-        orgId:"",
+        organizationId:"",
     })
 
     const AddEnterprises = (e) =>{
         const newEntData = {...enterpriseData}
         newEntData[e.target.name] = e.target.value
-        setEnterpriseData(newEntData)
+        setEnterpriseData(newEntData);
+        console.log(Object.keys(newEntData));
+        console.log(Object.values(newEntData))
     }
     
-    enterpriseData.orgId = organizationData.organizationId
-    // console.log("locat "+enterpriseData.locationName);
+    enterpriseData.organizationId = organizationId
 
     const registerEnt = async (e) => {
         e.preventDefault();
@@ -29,22 +31,32 @@ const AddEnterprise = ({organizationData}) => {
             enterpriseAddress : enterpriseData.enterpriseAddress,
             locationName : enterpriseData.locationName,
             locationAddress : enterpriseData.locationAddress,
-            organizationId : enterpriseData.orgId 
+            organizationId : enterpriseData.organizationId 
+        },{
+            "Access-Control-Allow-Origin":"*"
         })
         .then( (res) =>{
-            // console.log(res.data);
             console.log(res.data.locations);
-            // setEnterpriseData(res.data);
         })
-        .catch(err =>{
-            console.log(err);
+        .catch(error =>{
+            if (error.response) {
+                console.log(error.response.data);
+                console.log(error.response.status);
+                console.log(error.response.headers);
+              } else if (error.request) {
+                console.log(error.request);
+              } else {
+                console.log('Error', error.message);
+              }
+              console.log(error.config);
         })
-        navigate('/dash-board', {state : {id : enterpriseData.orgId,name : "raka"}})
+        navigate('/dash-board', {state : {id : enterpriseData.organizationId,name : "raka"}})
+        window.location.reload(true);
     }
 
     const reloadDashboard = () => {
         console.log("kachra");
-        navigate('/dash-board', {state : {id : enterpriseData.orgId, name : "erft"}})
+        navigate('/dash-board', {state : {id : enterpriseData.organizationId, name : "erft"}})
     }
 
     return (
