@@ -26,7 +26,7 @@ const App = () => {
           <Route exact path="/login" element={<Login />}/> 
           <Route exact path="/add-organization" element={<AddOrganisation />} />
           <Route exact path="/dash-board" element={<Dashboard meta={12} />} />
-          <Route exact path="/add-location-dashboard" element={<AddLocationDashboard/>} />
+          <Route exact path="/add-location-dashboard" element={<AddLocationDashboard />} />
           <Route path="*" element={<PageNotFound/>}/>
         </Routes>
       </div>

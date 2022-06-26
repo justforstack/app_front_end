@@ -21,7 +21,7 @@ const AddOrganisation = (props) => {
  const addr_ref=useRef(null)
     const notify = () => {toast.success("Organization added successfully!", {
         position: "top-right",
-        autoClose: 12000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -45,7 +45,7 @@ const registerOrg = async (e) =>{
     )
     .then(response=>{
         orgid =  response.data.organizationId;
-         console.log(response.data.organizationId);//for debuggibg purpose
+      //   console.log(response.data.organizationId);//for debuggibg purpose
     })
     .catch(error =>{
         if (error.response) {

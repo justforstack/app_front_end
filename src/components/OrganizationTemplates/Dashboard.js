@@ -23,8 +23,8 @@ const Dashboard = ({meta}) => {
         try {
             const response = await axios.get(`https://account-management-system-hero.herokuapp.com/get-organization/${orgId}`);
             if (response) {
-                console.log(Object.keys(response.data));
-                console.log(Object.values(response.data));
+               // console.log(Object.keys(response.data));
+              //  console.log(Object.values(response.data));
                 if (response.data) {
                     setOrgData(response.data);
                   setFlag(true)
