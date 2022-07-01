@@ -9,10 +9,7 @@ export function storeLocations(locations){
     }
 }
 const initialLocationState=[
-    {
-     locationName:'',
-    locationAddress:''
-    }
+   
 ]
 //reducer
 function reducer(state=initialLocationState,action){
