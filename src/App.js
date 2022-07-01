@@ -13,6 +13,7 @@ import AddOrganisation from './components/OrganizationTemplates/AddOrganisation'
 import Dashboard from './components/OrganizationTemplates/Dashboard';
 import PageNotFound from './PageNotFound'
 import AddLocationDashboard from './components/OrganizationTemplates/AddLocationDashboard'
+import Customer from './CustomerAssets/Customer';
 
 const App = () => {
 
@@ -27,6 +28,7 @@ const App = () => {
           <Route exact path="/add-organization" element={<AddOrganisation />} />
           <Route exact path="/dash-board" element={<Dashboard meta={12} />} />
           <Route exact path="/add-location-dashboard" element={<AddLocationDashboard />} />
+          <Route exact path="/customer" element={<Customer/>}/>
           <Route path="*" element={<PageNotFound/>}/>
         </Routes>
       </div>

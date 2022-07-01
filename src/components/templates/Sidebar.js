@@ -32,7 +32,7 @@ const Sidebar = props => {
   const styles = useStyles();
   const [open, setOpen] =useState(false);
 
- 
+
   return (
     <>
     <Hidden>
@@ -45,14 +45,14 @@ const Sidebar = props => {
         <Divider/>
         {navigationLinks.map((item)=>(
       <ListItem>
-         <Link
+        <Link
           className={styles.link}
             color="textPrimary"
             variant="button"
             underline="none"
             href={item.href}>
               {item.name}
-         </Link>
+        </Link>
       </ListItem>
     
     

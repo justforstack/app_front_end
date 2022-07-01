@@ -31,6 +31,11 @@ const Header = () => {
               Add Org
             </a>
           </li>
+          <li className="nav-item">
+            <a href="customer" className="nav-link">
+              Customer
+            </a>
+          </li>
         </ul>
       </header>
     </>
