@@ -13,7 +13,7 @@ import AddOrganisation from './components/OrganizationTemplates/AddOrganisation'
 import Dashboard from './components/OrganizationTemplates/Dashboard';
 import PageNotFound from './PageNotFound'
 import AddLocationDashboard from './components/OrganizationTemplates/AddLocationDashboard'
-import Customer from './CustomerAssets/Customer';
+import Customer from './components/CustomerAssets/Customer';
 
 const App = () => {
 

@@ -27,7 +27,7 @@ const Dashboard = ({meta}) => {
               //  console.log(Object.values(response.data));
                 if (response.data) {
                     setOrgData(response.data);
-                  setFlag(true)
+                    setFlag(true)
                     console.log(response.data);
                 } else {
                     console.log('No Schedule Job Locations returned');
