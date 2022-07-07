@@ -43,10 +43,6 @@ const Dashboard = ({meta}) => {
         console.log(x);
         fetchOrg();
     },[orgId,flag])
-   
-  
-        
- 
 
     return (
         <>
@@ -57,13 +53,10 @@ const Dashboard = ({meta}) => {
                         <th className="col-md-2" >
                             <Sidebar />
                         </th>
-                     
                     </tr>
-                   
-                   {flag? <th className="col-md-10 mt-3">
+                    {flag? <th className="col-md-10 mt-3">
                             <ShowEnterprises orgData={orgData} />
                         </th>:''}
-                
                 </thead>
             </Table>
         </>
